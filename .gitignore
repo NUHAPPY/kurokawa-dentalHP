@@ -2,3 +2,16 @@
 *.css.map
 *.sass.map
 *.scss.map
+
+node_modules/
+bower_components/
+
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+##common
+.DS_Store
+Thumbs.db
+._*
+*.mp4

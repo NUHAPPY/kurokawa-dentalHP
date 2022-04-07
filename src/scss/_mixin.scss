@@ -1,0 +1,26 @@
+@charset "utf-8";
+$mobile-max-width: 640px;
+$pc-min-width: 641px;
+@mixin mobile($max: $mobile-max-width) {
+    @media only screen and (max-width: #{$max}) {
+        @content;
+    }
+}
+
+@mixin pc($min: $pc-min-width) {
+    @media only screen and (min-width: #{$min}) {
+        @content;
+    }
+}
+
+@mixin spn($value) {
+    font-size: 1.2rem;
+    display: inline-block;
+    top: $sp*2;
+    right: $sp*2;
+    padding: 0 12px;
+    background-color: $value;
+    color: #fff;
+    text-align: center;
+    margin-left: 12px;
+}

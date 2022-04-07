@@ -1,0 +1,108 @@
+$width : 960px;
+$sp : 24px;
+$noto : 'Noto Sans JP';
+$gradationColor: #c6e2ec;
+$mainColor: #34a9d4;
+$naviColor: #deceba;
+$redColor: #ff0320;
+$orangeColor: #fc7e00;
+$pinkColor: #f7789e;
+$grayColor: #666;
+$white: #fff;
+$greenColor: #38a5a8;
+$hoverColor: #38A5A8;
+
+@import '_mixin.scss';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,900&subset=japanese');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $noto, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  background: linear-gradient(to bottom, $gradationColor, $white);
+  color: $grayColor;
+  background-repeat: no-repeat;
+}
+
+:root,
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  max-width: $width;
+  margin: 0 auto;
+
+  @include mobile {
+    padding : {
+      left: $sp;
+      right: $sp;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+h1 {
+  font-size: 36px;
+  /* IE8以下とAndroid4.3以下用フォールバック */
+  font-size: calc(2.4rem + ((1vw - 0.64rem) * 2.1429));
+  /* 24px~36pxで可変*/
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 24px;
+  /* IE8以下とAndroid4.3以下用フォールバック */
+  font-size: calc(2rem + ((1vw - 0.64rem) * 0.7143));
+  /* 20px~24pxで可変*/
+  line-height: 1.3;
+}
+
+@media (min-width: 1200px) {
+
+  /* 1200px以上*/
+  h1 {
+    font-size: 3.6rem;
+    /* 36px*/
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    /* 24px*/
+  }
+}
+
+@media screen and (max-width: 640px) {
+
+  /* 640px以下*/
+  body {
+    line-height: 2;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    /* 24px*/
+  }
+
+  h2 {
+    font-size: 2rem;
+    /* 20px*/
+  }
+}

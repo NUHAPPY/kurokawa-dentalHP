@@ -1,0 +1,267 @@
+@charset 'utf-8';
+@import '_destyle.scss';
+@import '_mixin.scss';
+@import '_common.scss';
+
+/*--header--*/
+header{
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+    padding : {
+        top : $sp / 2 ;
+        bottom : $sp  ;
+    }
+    h1{
+        position: absolute;
+        top: $sp * 2;
+        @include mobile{
+            position : relative;
+            top: 0;
+        }
+    }
+    h2{
+        font-size: 1.4rem;
+        @include mobile{
+            display: none;
+        }
+    }
+}
+nav{
+    @include mobile{
+        display: none;
+    }
+    background-color: $naviColor;
+    border : {
+        bottom : 2px solid $white;
+        top : 2px solid $white;
+    }
+    ul{
+        display:flex;
+        justify-content: flex-end;
+        li{
+            border-left: 1px solid $white;
+            &:first-child{
+                border-left:none;
+            }
+            a{
+                display: block;
+                padding : {
+                    left : $sp / 2 ;
+                    right : $sp / 2 ;
+                }
+                padding : {
+                    top : $sp / 2 ;
+                    bottom : $sp / 2 ;
+                }
+                &:hover{
+                    background-color: $hoverColor;
+                    color: $white
+                }
+            }
+        }
+    }
+}
+
+.mobile__menu{
+    @include pc{
+        display: none;
+    }
+    #mobile__bar{
+        background-color: $naviColor;
+        color: #fff;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 12px;
+    }
+    .mobile__item{
+        border-bottom: 1px solid $naviColor;
+        background-color: #fff;
+        a{
+                display: block;
+                padding: 12px;
+                color : $naviColor;
+                &:hover{
+                    background-color: lighten($naviColor, 5);
+                    color : #ffffff;
+                }
+        }
+    }
+}
+.container{
+    display:flex;
+    padding : {
+        top : $sp / 2 ;
+        bottom : $sp / 2 ;
+    }
+    @include mobile{
+        flex-direction: column;
+    }
+}
+.contentsLeft{
+    width: 587px;
+    @include mobile{
+        width: 100%;
+    }
+}
+.contentsRight{
+    img{
+        width: 100%;
+    }
+    width: 40%;
+    padding-left: $sp;
+    @include mobile{
+        width: 100%;
+        padding-top: $sp*2;
+    }
+    &__div{
+        margin-top: $sp / 2;
+        background-color: #fff;
+        border-radius: $sp;
+        border:5px solid #eee;
+        padding : {
+            left : $sp / 2 ;
+            right : $sp / 2 ;
+        }
+        padding : {
+            top : $sp / 2 ;
+            bottom : $sp / 2 ;
+        }
+        h3{
+            color: $orangeColor;
+            font-size: 2.0rem;
+            text-align: center;
+            padding-bottom: $sp/2;
+        }
+        p{
+            padding : {
+                left : $sp / 2 ;
+                right : $sp / 2 ;
+            }
+            padding : {
+                top : $sp / 2 ;
+                bottom : $sp / 2 ;
+            }
+        }
+        .btn{
+            background-color: $pinkColor;
+            color: $white;
+            display: block;
+            text-align: center;
+            padding : {
+                top : $sp / 2 ;
+                bottom : $sp / 2 ;
+            }
+            &:hover{
+                background-color: $mainColor;
+            }
+        }
+    }
+}
+.newsContainer{
+    margin-top: $sp/2;
+    margin-bottom: $sp/2;
+    min-height: 300px;
+    background-image: url(../img/new.png);
+    background-size: cover;
+    border-radius: $sp;
+    @include mobile{
+        background-image: none;
+        background-color:$white;
+        padding-top:$sp;
+    }
+    padding : {
+        top : $sp * 3 ;
+        bottom : $sp  ;
+    }
+    dl{
+        margin-left: $sp*2;
+        dt{
+            color: $orangeColor;
+        }
+        dd{
+            padding-bottom: 1.6rem;
+            a{
+                color: $mainColor;
+            }
+        }
+    }
+}
+small{
+    display: inline-block;
+    line-height: 1.4rem;
+}
+.pdfContainer{
+    @include mobile{
+        display: none;
+    }
+}
+.pdf{
+    margin-right: $sp/4;
+    @include mobile{
+        margin-bottom:$sp/4;
+    }
+}
+footer{
+    background-color: $gradationColor;
+    position: relative;
+    padding-bottom: $sp;
+    img{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -60px;
+        margin: auto;
+    }
+}
+.footerContainer{
+    display:flex;
+    justify-content: space-between;
+    padding-top: $sp*5;
+    @include mobile{
+        padding-top:$sp*2;
+        flex-direction: column;
+    }
+    &__left{
+        h4{
+            font-size: 2.4rem;
+            color: $grayColor;
+        }
+        p{
+            color: $white;
+            padding : {
+                top : $sp / 2 ;
+                bottom : $sp  ;
+            }
+        }
+    }
+    &__right{
+        display:flex;
+        ul{
+            margin-right: $sp * 2;
+            border-right: 1px solid $grayColor;
+            padding-right: $sp * 2;
+            &:last-child{
+                border-right:none;
+                padding-right: 0;
+            }
+            li{
+                line-height: 3rem;
+            }
+        }
+    }
+}
+.copyright{
+    text-align: center;
+    color: $white;
+    background-color: $grayColor;
+    font-size: 1.2rem;
+    padding : {
+        top : $sp / 2 ;
+        bottom : $sp / 2 ;
+    }
+}
