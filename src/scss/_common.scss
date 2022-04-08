@@ -9,12 +9,15 @@ $orangeColor: #fc7e00;
 $pinkColor: #f7789e;
 $grayColor: #666;
 $white: #fff;
-$greenColor: #38a5a8;
+$greenColor: #238C00;
 $hoverColor: #38A5A8;
+$blueColor: #0059B2;
+$red: #ff0320;
+$gray: #666;
 
 @import '_mixin.scss';
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,900&subset=japanese');
-
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap');
 * {
   box-sizing: border-box;
 }

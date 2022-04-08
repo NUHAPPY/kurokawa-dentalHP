@@ -3,6 +3,7 @@
 /* Reset box-model
    ========================================================================== */
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,900&subset=japanese");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -664,7 +665,7 @@ nav ul li a:hover {
 
 .container {
   display: flex;
-  padding-top: 12px;
+  padding-top: 12px !important;
   padding-bottom: 12px;
 }
 
@@ -778,6 +779,10 @@ small {
   line-height: 1.4rem;
 }
 
+.pdfContainer {
+  padding-top: 12px;
+}
+
 @media only screen and (max-width: 640px) {
   .pdfContainer {
     display: none;
@@ -856,6 +861,427 @@ footer img {
   color: #fff;
   background-color: #666;
   font-size: 1.2rem;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/*--COMMON--*/
+.center {
+  text-align: center;
+}
+
+#toTop {
+  text-align: right;
+  position: relative;
+  z-index: 99999;
+  padding-bottom: 24px;
+}
+
+h2.title {
+  font-weight: 700;
+  font-size: 3rem;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+h2.title span {
+  display: inline-block;
+  color: #238C00;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 1px #ffffff, -2px 2px 1px #ffffff, 2px -2px 1px #ffffff, -2px -2px 1px #ffffff, 2px 0px 1px #ffffff, 0px 2px 1px #ffffff, -2px 0px 1px #ffffff, 0px -2px 1px #ffffff;
+}
+
+.subTitle {
+  color: #0059B2;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  padding-bottom: 12px;
+}
+
+.subTitle::before {
+  content: url(../img/title_icon.png);
+  position: relative;
+  top: 4px;
+}
+
+.subTitle + p {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+@media only screen and (max-width: 640px) {
+  .subTitle + p {
+    padding-top: 0;
+  }
+}
+
+section {
+  padding-top: 96px;
+  padding-bottom: 24px;
+}
+
+@media only screen and (max-width: 640px) {
+  section {
+    padding-top: 24px;
+  }
+}
+
+.pageContainer {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.wrapperContents {
+  max-width: 816px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 640px) {
+  .wrapperContents {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.red {
+  color: #ff0320;
+}
+
+.photoContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 640px) {
+  .photoContainer {
+    flex-direction: column;
+  }
+}
+
+.photoContainer__item {
+  width: 45%;
+}
+
+@media only screen and (max-width: 640px) {
+  .photoContainer__item {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}
+
+/*--医師の紹介--*/
+.introContainer {
+  display: flex;
+  padding-top: 24px;
+  padding-bottom: 72px;
+}
+
+@media only screen and (max-width: 640px) {
+  .introContainer {
+    flex-direction: column;
+  }
+}
+
+.introContainer__left {
+  width: 60%;
+  padding-right: 48px;
+}
+
+@media only screen and (max-width: 640px) {
+  .introContainer__left {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 24px;
+  }
+}
+
+.introContainer__right {
+  width: 40%;
+}
+
+@media only screen and (max-width: 640px) {
+  .introContainer__right {
+    width: 100%;
+  }
+}
+
+.introContainer__right img {
+  padding-bottom: 24px;
+}
+
+/*--当院のご案内--*/
+.informationContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+@media only screen and (max-width: 640px) {
+  .informationContainer {
+    flex-direction: column;
+  }
+}
+
+.informationContainer__left {
+  width: 55%;
+}
+
+@media only screen and (max-width: 640px) {
+  .informationContainer__left {
+    width: 100%;
+  }
+}
+
+.informationContainer__right {
+  width: 40%;
+}
+
+@media only screen and (max-width: 640px) {
+  .informationContainer__right {
+    width: 100%;
+  }
+}
+
+.informationContainer__list {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.informationContainer__list li::before {
+  content: "※";
+  color: #ff0320;
+}
+
+@media only screen and (max-width: 640px) {
+  .informationContainer__list li {
+    font-size: 1.4rem;
+  }
+}
+
+.informationPhoto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 640px) {
+  .informationPhoto {
+    flex-direction: column;
+  }
+}
+
+.informationPhoto__item {
+  width: 30%;
+}
+
+@media only screen and (max-width: 640px) {
+  .informationPhoto__item {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+}
+
+.informationPhoto__item h4 {
+  background-color: #c6e2ec;
+  text-align: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-top: 4px;
+}
+
+.informationPhoto__item p {
+  line-height: 3rem;
+}
+
+/*--交通案内--*/
+.map {
+  border: 3px solid #fff;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+/*--診療案内--*/
+.sinryoTitle {
+  background-color: #34a9d4;
+  color: #fff;
+  font-size: 2rem;
+  padding: 12px;
+}
+
+.sinryoContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+@media only screen and (max-width: 640px) {
+  .sinryoContainer {
+    flex-direction: column;
+  }
+}
+
+.sinryoContainer__item {
+  width: 49%;
+}
+
+@media only screen and (max-width: 640px) {
+  .sinryoContainer__item {
+    width: 100%;
+  }
+}
+
+.sinryoContainer__item h5 {
+  font-size: 2.4rem;
+  padding-bottom: 6px;
+  color: #fc7e00;
+}
+
+.sinryoContainer__item p {
+  padding-bottom: 1.6rem;
+}
+
+.sinryoContainer__item img {
+  border: 1px solid #666;
+}
+
+.sinryoContainer__item ul {
+  padding-top: 12px;
+  padding-bottom: 24px;
+}
+
+.sinryoContainer__item ul li {
+  padding-left: 2.6rem;
+  text-indent: -2.6rem;
+}
+
+.sinryoContainer__item ul li::before {
+  content: url(../img/checkIcon.png);
+  position: relative;
+  top: 4px;
+  margin-right: 12px;
+}
+
+/*--個人情報保護ポリシー--*/
+.policy-sub-title {
+  color: #34a9d4;
+  padding-top: 24px;
+}
+
+.policyContainer ul li {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+/*--お問合せ--*/
+.form__item {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+@media only screen and (max-width: 640px) {
+  .form__item {
+    flex-direction: column;
+  }
+}
+
+.form__item label {
+  width: 30%;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  display: inline-block;
+  padding-left: 0;
+  padding-right: 24px;
+}
+
+@media only screen and (max-width: 640px) {
+  .form__item label {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+}
+
+.form__item label span.required {
+  background-color: #ff0320;
+  color: #fff;
+  padding: 2px 12px;
+  border-radius: 4px;
+  margin-left: 12px;
+}
+
+.form__item_submit {
+  display: flex;
+  justify-content: center;
+}
+
+input[type=text], textarea, input[type=email], input[type=tel] {
+  border: 1px solid #666;
+  padding: 12px;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: #34a9d4;
+  color: #fff;
+  padding: 12px;
+  width: 20vw;
+  text-align: center;
+}
+
+@media only screen and (max-width: 640px) {
+  input[type=submit] {
+    width: 80vw;
+  }
+}
+
+/*--料金案内--*/
+.priceContainer h4 {
+  text-align: center;
+  color: #34a9d4;
+  font-size: 2.4rem;
+  padding-bottom: 12px;
+}
+
+.priceContainer article {
+  position: relative;
+  border: 2px solid #34a9d4;
+  background-color: #fff;
+  padding: 12px 24px;
+  margin-bottom: 24px;
+}
+
+.priceContainer article::after {
+  content: url(../img/title_icon.png);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.priceContainer article h1 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  border-bottom: 1px solid #000;
+  padding-bottom: 6px;
+  color: #000;
+}
+
+@media only screen and (max-width: 640px) {
+  .priceContainer article h1 {
+    flex-direction: column;
+  }
+}
+
+.priceContainer article h1 span {
+  display: inline-block;
+  font-size: 1.8rem;
+}
+
+.priceContainer article h2 {
+  color: #0059B2;
+  font-size: 2rem;
   padding-top: 12px;
   padding-bottom: 12px;
 }

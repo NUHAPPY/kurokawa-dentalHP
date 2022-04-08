@@ -4,61 +4,77 @@
 @import '_common.scss';
 
 /*--header--*/
-header{
+header {
     position: relative;
-    display:flex;
+    display: flex;
     justify-content: space-between;
-    @include mobile{
+
+    @include mobile {
         flex-direction: column;
         align-items: center;
     }
+
     padding : {
-        top : $sp / 2 ;
-        bottom : $sp  ;
+        top: $sp / 2;
+        bottom: $sp;
     }
-    h1{
+
+    h1 {
         position: absolute;
         top: $sp * 2;
-        @include mobile{
-            position : relative;
+
+        @include mobile {
+            position: relative;
             top: 0;
         }
     }
-    h2{
+
+    h2 {
         font-size: 1.4rem;
-        @include mobile{
+
+        @include mobile {
             display: none;
         }
     }
 }
-nav{
-    @include mobile{
+
+nav {
+    @include mobile {
         display: none;
     }
+
     background-color: $naviColor;
+
     border : {
-        bottom : 2px solid $white;
-        top : 2px solid $white;
+        bottom: 2px solid $white;
+        top: 2px solid $white;
     }
-    ul{
-        display:flex;
+
+    ul {
+        display: flex;
         justify-content: flex-end;
-        li{
+
+        li {
             border-left: 1px solid $white;
-            &:first-child{
-                border-left:none;
+
+            &:first-child {
+                border-left: none;
             }
-            a{
+
+            a {
                 display: block;
+
                 padding : {
-                    left : $sp / 2 ;
-                    right : $sp / 2 ;
+                    left: $sp / 2;
+                    right: $sp / 2;
                 }
+
                 padding : {
-                    top : $sp / 2 ;
-                    bottom : $sp / 2 ;
+                    top: $sp / 2;
+                    bottom: $sp / 2;
                 }
-                &:hover{
+
+                &:hover {
                     background-color: $hoverColor;
                     color: $white
                 }
@@ -67,150 +83,185 @@ nav{
     }
 }
 
-.mobile__menu{
-    @include pc{
+.mobile__menu {
+    @include pc {
         display: none;
     }
-    #mobile__bar{
+
+    #mobile__bar {
         background-color: $naviColor;
         color: #fff;
         padding-top: 12px;
         padding-bottom: 12px;
         padding-left: 12px;
     }
-    .mobile__item{
+
+    .mobile__item {
         border-bottom: 1px solid $naviColor;
         background-color: #fff;
-        a{
-                display: block;
-                padding: 12px;
-                color : $naviColor;
-                &:hover{
-                    background-color: lighten($naviColor, 5);
-                    color : #ffffff;
-                }
+
+        a {
+            display: block;
+            padding: 12px;
+            color: $naviColor;
+
+            &:hover {
+                background-color: lighten($naviColor, 5);
+                color: #ffffff;
+            }
         }
     }
 }
-.container{
-    display:flex;
+
+.container {
+    display: flex;
+
     padding : {
-        top : $sp / 2 ;
-        bottom : $sp / 2 ;
+        top: $sp / 2 !important;
+        bottom: $sp / 2;
     }
-    @include mobile{
+
+    @include mobile {
         flex-direction: column;
     }
 }
-.contentsLeft{
+
+.contentsLeft {
     width: 587px;
-    @include mobile{
+
+    @include mobile {
         width: 100%;
     }
 }
-.contentsRight{
-    img{
+
+.contentsRight {
+    img {
         width: 100%;
     }
+
     width: 40%;
     padding-left: $sp;
-    @include mobile{
+
+    @include mobile {
         width: 100%;
         padding-top: $sp*2;
     }
-    &__div{
+
+    &__div {
         margin-top: $sp / 2;
         background-color: #fff;
         border-radius: $sp;
-        border:5px solid #eee;
+        border: 5px solid #eee;
+
         padding : {
-            left : $sp / 2 ;
-            right : $sp / 2 ;
+            left: $sp / 2;
+            right: $sp / 2;
         }
+
         padding : {
-            top : $sp / 2 ;
-            bottom : $sp / 2 ;
+            top: $sp / 2;
+            bottom: $sp / 2;
         }
-        h3{
+
+        h3 {
             color: $orangeColor;
             font-size: 2.0rem;
             text-align: center;
             padding-bottom: $sp/2;
         }
-        p{
+
+        p {
             padding : {
-                left : $sp / 2 ;
-                right : $sp / 2 ;
+                left: $sp / 2;
+                right: $sp / 2;
             }
+
             padding : {
-                top : $sp / 2 ;
-                bottom : $sp / 2 ;
+                top: $sp / 2;
+                bottom: $sp / 2;
             }
         }
-        .btn{
+
+        .btn {
             background-color: $pinkColor;
             color: $white;
             display: block;
             text-align: center;
+
             padding : {
-                top : $sp / 2 ;
-                bottom : $sp / 2 ;
+                top: $sp / 2;
+                bottom: $sp / 2;
             }
-            &:hover{
+
+            &:hover {
                 background-color: $mainColor;
             }
         }
     }
 }
-.newsContainer{
+
+.newsContainer {
     margin-top: $sp/2;
     margin-bottom: $sp/2;
     min-height: 300px;
     background-image: url(../img/new.png);
     background-size: cover;
     border-radius: $sp;
-    @include mobile{
+
+    @include mobile {
         background-image: none;
-        background-color:$white;
-        padding-top:$sp;
+        background-color: $white;
+        padding-top: $sp;
     }
+
     padding : {
-        top : $sp * 3 ;
-        bottom : $sp  ;
+        top: $sp * 3;
+        bottom: $sp;
     }
-    dl{
+
+    dl {
         margin-left: $sp*2;
-        dt{
+
+        dt {
             color: $orangeColor;
         }
-        dd{
+
+        dd {
             padding-bottom: 1.6rem;
-            a{
+
+            a {
                 color: $mainColor;
             }
         }
     }
 }
-small{
+
+small {
     display: inline-block;
     line-height: 1.4rem;
 }
-.pdfContainer{
-    @include mobile{
+
+.pdfContainer {
+    padding-top: $sp/2;
+    @include mobile {
         display: none;
     }
 }
-.pdf{
+
+.pdf {
     margin-right: $sp/4;
-    @include mobile{
-        margin-bottom:$sp/4;
+
+    @include mobile {
+        margin-bottom: $sp/4;
     }
 }
-footer{
+
+footer {
     background-color: $gradationColor;
     position: relative;
     padding-bottom: $sp;
-    img{
+
+    img {
         position: absolute;
         left: 0;
         right: 0;
@@ -218,50 +269,428 @@ footer{
         margin: auto;
     }
 }
-.footerContainer{
-    display:flex;
+
+.footerContainer {
+    display: flex;
     justify-content: space-between;
     padding-top: $sp*5;
-    @include mobile{
-        padding-top:$sp*2;
+
+    @include mobile {
+        padding-top: $sp*2;
         flex-direction: column;
     }
-    &__left{
-        h4{
+
+    &__left {
+        h4 {
             font-size: 2.4rem;
             color: $grayColor;
         }
-        p{
+
+        p {
             color: $white;
+
             padding : {
-                top : $sp / 2 ;
-                bottom : $sp  ;
+                top: $sp / 2;
+                bottom: $sp;
             }
         }
     }
-    &__right{
-        display:flex;
-        ul{
+
+    &__right {
+        display: flex;
+
+        ul {
             margin-right: $sp * 2;
             border-right: 1px solid $grayColor;
             padding-right: $sp * 2;
-            &:last-child{
-                border-right:none;
+
+            &:last-child {
+                border-right: none;
                 padding-right: 0;
             }
-            li{
+
+            li {
                 line-height: 3rem;
             }
         }
     }
 }
-.copyright{
+
+.copyright {
     text-align: center;
     color: $white;
     background-color: $grayColor;
     font-size: 1.2rem;
+
     padding : {
-        top : $sp / 2 ;
-        bottom : $sp / 2 ;
+        top: $sp / 2;
+        bottom: $sp / 2;
+    }
+}
+
+/*--COMMON--*/
+.center{
+    text-align: center;
+}
+#toTop{
+    text-align: right;
+    position: relative;
+    z-index: 99999;
+    padding-bottom: $sp;
+}
+h2.title {
+    span {
+        display: inline-block;
+        color: $greenColor;
+        letter-spacing: 2px;
+        text-shadow:
+            2px 2px 1px #ffffff,
+            -2px 2px 1px #ffffff,
+            2px -2px 1px #ffffff,
+            -2px -2px 1px #ffffff,
+            2px 0px 1px #ffffff,
+            0px 2px 1px #ffffff,
+            -2px 0px 1px #ffffff,
+            0px -2px 1px #ffffff;
+    }
+
+    font-weight: 700;
+    font-size: 3rem;
+    font-family: 'M PLUS Rounded 1c',
+    sans-serif;
+}
+
+.subTitle{
+    color: $blueColor;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    padding-bottom: $sp / 2;
+    &::before{
+        content: url(../img/title_icon.png);
+        position: relative;
+        top: 4px;
+    }
+    & + p {
+        padding : {
+            top : $sp  ;
+            bottom : $sp  ;
+        }
+        @include mobile{
+            padding-top : 0 ;
+        }
+    }
+}
+section {
+    padding : {
+        top: $sp * 4;
+        bottom: $sp;
+    }
+    @include mobile{
+        padding-top: $sp;
+    }
+}
+.pageContainer{
+    padding : {
+        top : $sp  ;
+        bottom : $sp  ;
+    }
+}
+.wrapperContents {
+    max-width: $width - $sp * 6;
+    margin: 0 auto;
+
+    @include mobile {
+        padding : {
+            left: $sp;
+            right: $sp;
+        }
+    }
+}
+.red{
+    color: $redColor;
+}
+.photoContainer{
+    display:flex;
+    justify-content: space-between;
+    @include mobile{
+        flex-direction: column;
+    }
+    &__item{
+        width: 45%;
+        @include mobile{
+            width: 100%;
+            margin-bottom: $sp/2;
+        }
+    }
+}
+
+/*--医師の紹介--*/
+.introContainer{
+    display:flex;
+    @include mobile{
+        flex-direction: column;
+    }
+    padding : {
+        top : $sp  ;
+        bottom : $sp * 3 ;
+    }
+    &__left{
+        width: 60%;
+        padding-right: $sp * 2;
+        @include mobile{
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: $sp;
+        }
+    }
+    &__right{
+        width: 40%;
+        @include mobile{
+            width: 100%;
+        }
+        img{
+            padding-bottom: $sp;
+        }
+    }
+}
+
+/*--当院のご案内--*/
+.informationContainer{
+    display:flex;
+    justify-content: space-between;
+    padding : {
+        top : $sp  ;
+        bottom : $sp  ;
+    }
+    @include mobile{
+        flex-direction: column;
+    }
+    &__left{
+        width: 55%;
+        @include mobile{
+            width: 100%;
+        }
+    }
+    &__right{
+        width: 40%;
+        @include mobile{
+            width: 100%;
+        }
+    }
+    &__list{
+        padding : {
+            top : $sp  ;
+            bottom : $sp  ;
+        }
+        li{
+            &::before{
+                content: "※";
+                color: $redColor;
+            }
+            @include mobile{
+                font-size:1.4rem;
+            }
+        }
+    }
+}
+.informationPhoto{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include mobile{
+        flex-direction: column;
+    }
+    &__item{
+        width: 30%;
+        @include mobile{
+            width: 100%;
+            margin-bottom: $sp * 2;
+        }
+        h4{
+            background-color: $gradationColor;
+            text-align: center;
+            padding : {
+                top : $sp / 4 ;
+                bottom : $sp / 4 ;
+            }
+            margin-top: $sp / 6;
+        }
+        p{
+            line-height: 3rem;
+        }
+    }
+}
+
+/*--交通案内--*/
+.map{
+    border : 3px solid $white;
+    margin : {
+        top : $sp  ;
+        bottom : $sp  ;
+    }
+}
+
+/*--診療案内--*/
+.sinryoTitle{
+    background-color: $mainColor;
+    color: $white;
+    font-size: 2rem;
+    padding: $sp/2;
+}
+.sinryoContainer{
+    display:flex;
+    justify-content: space-between;
+    padding : {
+        top : $sp  ;
+        bottom : $sp  ;
+    }
+    @include mobile{
+        flex-direction: column;
+    }
+    &__item{
+        width: 49%;
+        @include mobile{
+            width: 100%;
+        }
+        h5{
+            font-size: 2.4rem;
+            padding-bottom: $sp / 4;
+            color: $orangeColor;
+        }
+        p{
+            padding-bottom: 1.6rem;
+        }
+        img{
+            border: 1px solid $grayColor;
+        }
+        ul{
+            padding-top: $sp / 2;
+            padding-bottom: $sp;
+            li{
+                padding-left:2.6rem;
+                text-indent:-2.6rem;
+                &::before{
+                    content: url(../img/checkIcon.png);
+                    position: relative;
+                    top : 4px;
+                    margin-right: $sp / 2;
+                }
+            }
+        }
+    }
+}
+
+/*--個人情報保護ポリシー--*/
+.policy-sub-title{
+    color: $mainColor;
+    padding-top: $sp;
+}
+.policyContainer{
+    ul{
+        li{
+            list-style: disc;
+            list-style-position: inside;
+        }
+    }
+}
+
+/*--お問合せ--*/
+.form{
+    &__item{
+        display:flex;
+        align-items: center;
+        margin : {
+            top : $sp  ;
+            bottom : $sp  ;
+        }
+        @include mobile{
+            flex-direction: column;
+        }
+        label{
+            width: 30%;
+            font-size: 1.4rem;
+            @include mobile{
+                width: 100%;
+                padding-bottom: 1rem;
+            }
+            white-space: nowrap;
+            display: inline-block;
+            padding : {
+                left : 0  ;
+                right : $sp  ;
+            }
+            span.required{
+                background-color: $red;
+                color: $white;
+                padding: 2px $sp/2;
+                border-radius: 4px;
+                margin-left: $sp/2;
+            }
+        }
+        &_submit{
+            display:flex;
+            justify-content: center;
+        }
+    }
+}
+input[type=text],textarea,input[type=email],input[type=tel]{
+    border: 1px solid $gray;
+    padding: $sp/2;
+    width: 100%;
+}
+input[type=submit]{
+    background-color: $mainColor;
+    color: $white;
+    padding:$sp/2;
+    width: 20vw;
+    text-align: center;
+    @include mobile{
+        width:80vw;
+    }
+}
+
+/*--料金案内--*/
+.priceContainer{
+    h4{
+        text-align: center;
+        color: $mainColor;
+        font-size: 2.4rem;
+        padding-bottom: $sp/2;
+    }
+    article{
+        &::after{
+            content: url(../img/title_icon.png);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        position: relative;
+        border: 2px solid $mainColor;
+        background-color: #fff;
+        padding: $sp/2 $sp;
+        margin-bottom: $sp;
+        h1{
+            display:flex;
+            justify-content: space-between;
+            @include mobile{
+                flex-direction: column;
+            }
+            font-size: 2rem;
+            border-bottom: 1px solid #000;
+            padding-bottom: $sp / 4;
+            color: #000;
+            span{
+                display: inline-block;
+                font-size: 1.8rem;
+            }
+        }
+        h2{
+            color: $blueColor;
+            font-size: 2rem;
+            padding : {
+                top : $sp / 2 ;
+                bottom : $sp / 2 ;
+            }
+        }
     }
 }
